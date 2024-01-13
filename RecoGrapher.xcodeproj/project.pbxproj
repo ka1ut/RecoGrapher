@@ -13,9 +13,6 @@
 		5D8B82A02B52E7AE00B79837 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D8B829F2B52E7AE00B79837 /* Preview Assets.xcassets */; };
 		5D8B82A22B52E7AE00B79837 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8B82A12B52E7AE00B79837 /* Persistence.swift */; };
 		5D8B82A52B52E7AE00B79837 /* RecoGrapher.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5D8B82A32B52E7AE00B79837 /* RecoGrapher.xcdatamodeld */; };
-		5D8B82AF2B52E7AE00B79837 /* RecoGrapherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8B82AE2B52E7AE00B79837 /* RecoGrapherTests.swift */; };
-		5D8B82B92B52E7AE00B79837 /* RecoGrapherUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8B82B82B52E7AE00B79837 /* RecoGrapherUITests.swift */; };
-		5D8B82BB2B52E7AE00B79837 /* RecoGrapherUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8B82BA2B52E7AE00B79837 /* RecoGrapherUITestsLaunchTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,10 +41,7 @@
 		5D8B82A12B52E7AE00B79837 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		5D8B82A42B52E7AE00B79837 /* RecoGrapher.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RecoGrapher.xcdatamodel; sourceTree = "<group>"; };
 		5D8B82AA2B52E7AE00B79837 /* RecoGrapherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RecoGrapherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5D8B82AE2B52E7AE00B79837 /* RecoGrapherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoGrapherTests.swift; sourceTree = "<group>"; };
 		5D8B82B42B52E7AE00B79837 /* RecoGrapherUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RecoGrapherUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5D8B82B82B52E7AE00B79837 /* RecoGrapherUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoGrapherUITests.swift; sourceTree = "<group>"; };
-		5D8B82BA2B52E7AE00B79837 /* RecoGrapherUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoGrapherUITestsLaunchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,8 +73,6 @@
 			isa = PBXGroup;
 			children = (
 				5D8B82972B52E7AC00B79837 /* RecoGrapher */,
-				5D8B82AD2B52E7AE00B79837 /* RecoGrapherTests */,
-				5D8B82B72B52E7AE00B79837 /* RecoGrapherUITests */,
 				5D8B82962B52E7AC00B79837 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -114,23 +106,6 @@
 				5D8B829F2B52E7AE00B79837 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		5D8B82AD2B52E7AE00B79837 /* RecoGrapherTests */ = {
-			isa = PBXGroup;
-			children = (
-				5D8B82AE2B52E7AE00B79837 /* RecoGrapherTests.swift */,
-			);
-			path = RecoGrapherTests;
-			sourceTree = "<group>";
-		};
-		5D8B82B72B52E7AE00B79837 /* RecoGrapherUITests */ = {
-			isa = PBXGroup;
-			children = (
-				5D8B82B82B52E7AE00B79837 /* RecoGrapherUITests.swift */,
-				5D8B82BA2B52E7AE00B79837 /* RecoGrapherUITestsLaunchTests.swift */,
-			);
-			path = RecoGrapherUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,7 +249,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5D8B82AF2B52E7AE00B79837 /* RecoGrapherTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,8 +256,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5D8B82B92B52E7AE00B79837 /* RecoGrapherUITests.swift in Sources */,
-				5D8B82BB2B52E7AE00B79837 /* RecoGrapherUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
