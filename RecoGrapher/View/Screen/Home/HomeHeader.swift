@@ -11,7 +11,7 @@ struct HomeHeaderView: View {
                 }){
                     Image(systemName: "line.horizontal.3")
                         .resizable()
-                        .frame(width: 20)
+                        .frame(width:20, height: 20)
                         .foregroundColor(Color.customBlack)
                 }
 
