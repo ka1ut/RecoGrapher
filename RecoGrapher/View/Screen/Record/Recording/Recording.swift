@@ -8,6 +8,8 @@ struct WritePage: View {
     @Environment(\.dismiss) private var dismiss
     @State var inputText = ""
     
+    @ObservedObject private var recordingViewModel = RecordingViewModel()
+    
     var body: some View {
         VStack {
             HStack {
@@ -44,25 +46,36 @@ struct WritePage: View {
             
             ZStack{
                 // 背景
-                Rectangle()
-                    .fill(Color.customBlack)
-                VStack{
+                VStack(spacing: 20) {
+                    Image(systemName: recordingViewModel.isRecognition ? "mic.slash.circle" : "mic.circle")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 100, height: 100)
+                        .foregroundColor(recordingViewModel.isRecognition ? .red : .primary)
+                        .onTapGesture {
+                            recordingViewModel.onTaped() // ここを修正
+                        }
                     
-                    Spacer()
-                    
+                    // 他のテキストやビューのコンテンツ
                 }
                 .padding()
-                
-                
-                
-                
+                .onAppear {
+                    recordingViewModel.onAppear()
+                }
             }
-            .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/ .all/*@END_MENU_TOKEN@*/)
         }
+        VStack{
+            
+            Spacer()
+            
+        }
+        .padding()
+        .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/ .all/*@END_MENU_TOKEN@*/)
         .background(Color.customWhite)
     }
 }
-
+    
+    
 #Preview {
     WritePage()
         .environment(\.locale, Locale(identifier: "ja_JP"))
