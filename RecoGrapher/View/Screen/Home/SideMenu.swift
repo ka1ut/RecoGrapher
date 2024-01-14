@@ -2,8 +2,8 @@ import SwiftUI
 
 struct SideMenuView: View {
     @Binding var isOpen: Bool
-    let width: CGFloat = 270
-    
+    let width = UIScreen.main.bounds.width * 0.85
+
     var body: some View {
         ZStack {
             GeometryReader { geometry in
@@ -12,7 +12,7 @@ struct SideMenuView: View {
             .background(Color.gray.opacity(0.3))
             .opacity(self.isOpen ? 1.0 : 0.0)
             .opacity(1.0)
-            .animation(.easeIn(duration: 0.25))
+            .animation(.easeIn(duration: 0.15))
             .onTapGesture {
                 self.isOpen = false
             }
@@ -25,9 +25,9 @@ struct SideMenuView: View {
                     Spacer()
                 }
                 .frame(width: width)
-                .background(Color.customBlack)
+                .background(Color.customWhite)
                 .offset(x: self.isOpen ? 0 : -self.width)
-                .animation(.easeIn(duration: 0.25))
+                .animation(.easeIn(duration: 0.15))
                 Spacer()
             }
         }
@@ -50,11 +50,11 @@ struct SideMenuContentView: View {
     var body: some View {
         HStack {
             Image(systemName: systemName)
-                .foregroundColor(.customWhite)
+                .foregroundColor(.customBlack)
                 .imageScale(.large)
                 .frame(width: 32.0)
             Text(text)
-                .foregroundColor(Color.customWhite)
+                .foregroundColor(Color.customBlack)
                 .font(.headline)
             Spacer()
         }
