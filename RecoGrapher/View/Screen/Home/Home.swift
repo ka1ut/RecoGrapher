@@ -2,13 +2,15 @@ import SwiftUI
 
 struct Home: View {
     @State var selection = 1
+    @State var isOpenSideMenu: Bool = false
 
     var body: some View {
-        NavigationView {
-            GeometryReader { geometry in
+        // GeometryReader は親の位置
+        GeometryReader { geometry in
+            ZStack{
                 VStack {
-                    HomeHeaderView()
-                    
+                    HomeHeaderView(isOpenSideMenu:$isOpenSideMenu)
+            
                     Spacer()
                     
                     HStack {
@@ -17,10 +19,13 @@ struct Home: View {
                             .padding(EdgeInsets(top: 0, leading: 0, bottom: 26.0, trailing: 25.0))
                     }
                 }
-                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
+                SideMenuView(isOpen: $isOpenSideMenu)
+                                .edgesIgnoringSafeArea(.all)
             }
+            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
         }
     }
+    
 }
 
 #Preview {
