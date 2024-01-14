@@ -3,7 +3,7 @@ import Speech
 
 class RecordingViewModel : ObservableObject{
     /// 音声認識クラス
-    lazy var speechRecorder = SpeechRecognitionEngine(silenceTime:3
+    lazy var speechRecorder = SpeechRecognitionEngine(language: "JP",silenceTime:3
                                                       ,onFinishTask:onFinishTask
                                                       ,onRecognition:onRecognition)
     /// 認識中
@@ -13,27 +13,6 @@ class RecordingViewModel : ObservableObject{
     /// 認識中か否か
     @Published var isRecognition = false
     
-    /// 初期表示時
-    func onAppear(){
-        // 許可チェック
-        if !speechRecorder.authorization(){
-            // マイク認識要求
-            self.speechRecorder.requestAccess(){
-                // 許可チェック
-                if self.speechRecorder.authorization(){
-                    // 正常時処理
-                    print("Authorization OK")
-                } else {
-                    // 異常時処理
-                    print("Authorization NG")
-                    DispatchQueue.main.async {
-                        // 異常時処理
-                        self.result = "音声認識又は、マイクのアクセス権限がありません。設定画面よりアクセス権限を設定しアプリを再起動してください。"
-                    }
-                }
-            }
-        }
-    }
     
     /// マイクボタンタップ時
     func onTaped(){

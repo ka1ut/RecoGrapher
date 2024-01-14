@@ -5,7 +5,9 @@ import Speech
 final class SpeechRecognitionEngine: ObservableObject {
     var audioRunning: Bool = false
     private var audioEngine = AVAudioEngine()
+    //言語を選択する
     private var speechRecognizer = SFSpeechRecognizer(locale: Locale.current)!
+    
     private var recognitionRequest: SFSpeechAudioBufferRecognitionRequest?
     private var recognitionTask: SFSpeechRecognitionTask?
     /// オンデバイス認識
@@ -47,7 +49,8 @@ final class SpeechRecognitionEngine: ObservableObject {
     /// - Parameters:
     ///   - shouldReportPartialResults: true:途中報告 false:結果報告
     ///   - onRecognition: 音声認識時Call Back関数
-    init(firstSilenceTime:TimeInterval = 5
+    init(language:String = "JP",
+         firstSilenceTime:TimeInterval = 5
          , silenceTime:TimeInterval = 0.5
          , shouldReportPartialResults:Bool = true
          , taskHint:SFSpeechRecognitionTaskHint = .unspecified
@@ -68,6 +71,15 @@ final class SpeechRecognitionEngine: ObservableObject {
         self.onTimeout = onTimeout
         self.onError = onError
         self.taskHint = taskHint
+        //言語対応
+        switch language {
+        case "JP":
+            self.speechRecognizer = SFSpeechRecognizer(locale: Locale(identifier: "ja-JP"))!
+        case "EN":
+            self.speechRecognizer = SFSpeechRecognizer(locale: Locale(identifier: "en-US"))!
+        default:
+            self.speechRecognizer = SFSpeechRecognizer(locale: Locale.current)!
+        }
     }
     
     /// マイク・音声認識使用許可確認
@@ -122,9 +134,6 @@ final class SpeechRecognitionEngine: ObservableObject {
         let inputNode = audioEngine.inputNode
         inputNode.removeTap(onBus: 0)
         
-        // 音声認識の初期化
-        // SFSpeechRecognizerのインスタンス化
-        self.speechRecognizer = SFSpeechRecognizer(locale: Locale.current)!
         // オンデバイス判定
         if speechRecognizer.supportsOnDeviceRecognition {
             recognitionRequest?.requiresOnDeviceRecognition = self.requiresOnDeviceRecognition
@@ -290,12 +299,12 @@ final class SpeechRecognitionEngine: ObservableObject {
     
     /// タイマーによる終了処理
     @objc func didFinishTalk() {
-        print("didFinishTalk")
+        print("silentTimeOver")
         // silenceTime 初期化
         self.silenceTime = self.initSilenceTime
         
         // Call Back
-        onFinishTask()
+        //onFinishTask()
     }
     
     // MARK: SFSpeechRecognizerDelegate

@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct WritePage: View {
+struct RecordingPage: View {
     @State private var showingCamera = false
     @State private var image: UIImage?
     @State var showCapturedImage = false
@@ -46,22 +46,20 @@ struct WritePage: View {
             
             ZStack{
                 // 背景
-                VStack(spacing: 20) {
-                    Image(systemName: recordingViewModel.isRecognition ? "mic.slash.circle" : "mic.circle")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 100, height: 100)
-                        .foregroundColor(recordingViewModel.isRecognition ? .red : .primary)
-                        .onTapGesture {
-                            recordingViewModel.onTaped() // ここを修正
-                        }
+                VStack() {
+                    Button(action:{
+                        recordingViewModel.onTaped()
+                    },label:{
+                        Image(systemName: recordingViewModel.isRecognition ? "mic.slash.circle" : "mic.circle")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 100, height: 100)
+                            .foregroundColor(recordingViewModel.isRecognition ? .red : .primary)
+                    })
                     
                     // 他のテキストやビューのコンテンツ
                 }
                 .padding()
-                .onAppear {
-                    recordingViewModel.onAppear()
-                }
             }
         }
         VStack{
@@ -77,6 +75,5 @@ struct WritePage: View {
     
     
 #Preview {
-    WritePage()
-        .environment(\.locale, Locale(identifier: "ja_JP"))
+    RecordingPage()
 }
