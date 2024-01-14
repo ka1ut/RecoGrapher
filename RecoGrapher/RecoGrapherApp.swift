@@ -1,20 +1,32 @@
-//
-//  RecoGrapherApp.swift
-//  RecoGrapher
-//
-//  Created by 田中魁 on 2024/01/14.
-//
-
+import FirebaseCore
+import GoogleSignIn
 import SwiftUI
 
+class AppDelegate: UIResponder, UIApplicationDelegate {
+    func application(_ application: UIApplication,
+                     didFinishLaunchingWithOptions launchOptions: [UIApplication
+                         .LaunchOptionsKey: Any]?) -> Bool {
+        FirebaseApp.configure()
+
+        return true
+    }
+
+    func application(_ app: UIApplication,
+                     open url: URL,
+                     options: [UIApplication.OpenURLOptionsKey: Any] = [:]) -> Bool {
+        GIDSignIn.sharedInstance.handle(url)
+    }
+}
+
 @main
-struct RecoGrapherApp: App {
-    let persistenceController = PersistenceController.shared
+struct RecoGrapherpp: App {
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+            NavigationView {
+                ContentView()
+            }
         }
     }
 }
