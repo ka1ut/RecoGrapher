@@ -26,6 +26,7 @@ struct RecoGrapherpp: App {
         WindowGroup {
             NavigationView {
                 ContentView()
+                    
             }
         }
     }

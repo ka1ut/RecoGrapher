@@ -1,12 +1,14 @@
 import SwiftUI
 
-struct WritePage: View {
+struct RecordingPage: View {
     @State private var showingCamera = false
     @State private var image: UIImage?
     @State var showCapturedImage = false
     
     @Environment(\.dismiss) private var dismiss
     @State var inputText = ""
+    
+    @ObservedObject private var recordingViewModel = RecordingViewModel()
     
     var body: some View {
         VStack {
@@ -44,26 +46,34 @@ struct WritePage: View {
             
             ZStack{
                 // 背景
-                Rectangle()
-                    .fill(Color.customBlack)
-                VStack{
+                VStack() {
+                    Button(action:{
+                        recordingViewModel.onTaped()
+                    },label:{
+                        Image(systemName: recordingViewModel.isRecognition ? "mic.slash.circle" : "mic.circle")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 100, height: 100)
+                            .foregroundColor(recordingViewModel.isRecognition ? .red : .primary)
+                    })
                     
-                    Spacer()
-                    
+                    // 他のテキストやビューのコンテンツ
                 }
                 .padding()
-                
-                
-                
-                
             }
-            .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/ .all/*@END_MENU_TOKEN@*/)
         }
+        VStack{
+            
+            Spacer()
+            
+        }
+        .padding()
+        .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/ .all/*@END_MENU_TOKEN@*/)
         .background(Color.customWhite)
     }
 }
-
+    
+    
 #Preview {
-    WritePage()
-        .environment(\.locale, Locale(identifier: "ja_JP"))
+    RecordingPage()
 }

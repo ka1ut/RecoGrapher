@@ -17,7 +17,7 @@ struct RecordButton: View {
                     
             }
             .fullScreenCover(isPresented: $WriteView, content: {
-                WritePage()
+                RecordingPage()
             })
         }
         

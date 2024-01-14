@@ -28,6 +28,8 @@
 		5D8B82F52B53926900B79837 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8B82F42B53926900B79837 /* AuthViewModel.swift */; };
 		5D8B82F82B53A53F00B79837 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 5D8B82F72B53A53F00B79837 /* .gitignore */; };
 		5D8B82FA2B53A89400B79837 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 5D8B82F92B53A89400B79837 /* README.md */; };
+		5D8B82FC2B53ADFB00B79837 /* RecordingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8B82FB2B53ADFB00B79837 /* RecordingViewModel.swift */; };
+		5D8B82FF2B53B50500B79837 /* RecordingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8B82FE2B53B50500B79837 /* RecordingController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +72,8 @@
 		5D8B82F62B5397A200B79837 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		5D8B82F72B53A53F00B79837 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		5D8B82F92B53A89400B79837 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		5D8B82FB2B53ADFB00B79837 /* RecordingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingViewModel.swift; sourceTree = "<group>"; };
+		5D8B82FE2B53B50500B79837 /* RecordingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +127,7 @@
 		5D8B82972B52E7AC00B79837 /* RecoGrapher */ = {
 			isa = PBXGroup;
 			children = (
+				5D8B82FD2B53B4EC00B79837 /* Controller */,
 				5D8B82F62B5397A200B79837 /* Info.plist */,
 				5D8B82F32B53925500B79837 /* ViewModel */,
 				5D8B82E12B538C6400B79837 /* Model */,
@@ -148,6 +153,7 @@
 		5D8B82C72B52EA0500B79837 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				5D8B82CE2B52EA8400B79837 /* SideMenu.swift */,
 				5D8B82C82B52EA1E00B79837 /* Home.swift */,
 				5D8B82CC2B52EA6200B79837 /* HomeHeader.swift */,
 			);
@@ -168,7 +174,6 @@
 				5D8B82E92B538F7700B79837 /* SignUp */,
 				5D8B82D72B52F09B00B79837 /* Record */,
 				5D8B82C72B52EA0500B79837 /* Home */,
-				5D8B82CE2B52EA8400B79837 /* SideMenu.swift */,
 				5D8B82D02B52EA9400B79837 /* Search.swift */,
 			);
 			path = Screen;
@@ -220,8 +225,17 @@
 			isa = PBXGroup;
 			children = (
 				5D8B82F42B53926900B79837 /* AuthViewModel.swift */,
+				5D8B82FB2B53ADFB00B79837 /* RecordingViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		5D8B82FD2B53B4EC00B79837 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5D8B82FE2B53B50500B79837 /* RecordingController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -370,9 +384,11 @@
 				5D8B82DC2B52F0E300B79837 /* Recording.swift in Sources */,
 				5D8B82ED2B538FC000B79837 /* SignUp.swift in Sources */,
 				5D8B829B2B52E7AC00B79837 /* ContentView.swift in Sources */,
+				5D8B82FF2B53B50500B79837 /* RecordingController.swift in Sources */,
 				5D8B82C92B52EA1E00B79837 /* Home.swift in Sources */,
 				5D8B82D32B52EB9A00B79837 /* ColorExtension.swift in Sources */,
 				5D8B82DA2B52F0C100B79837 /* RecordButton.swift in Sources */,
+				5D8B82FC2B53ADFB00B79837 /* RecordingViewModel.swift in Sources */,
 				5D8B82992B52E7AC00B79837 /* RecoGrapherApp.swift in Sources */,
 				5D8B82CD2B52EA6200B79837 /* HomeHeader.swift in Sources */,
 				5D8B82CF2B52EA8400B79837 /* SideMenu.swift in Sources */,
