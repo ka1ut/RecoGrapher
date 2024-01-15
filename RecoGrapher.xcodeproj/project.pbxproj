@@ -29,7 +29,7 @@
 		5D8B82F82B53A53F00B79837 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 5D8B82F72B53A53F00B79837 /* .gitignore */; };
 		5D8B82FA2B53A89400B79837 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 5D8B82F92B53A89400B79837 /* README.md */; };
 		5D8B82FC2B53ADFB00B79837 /* RecordingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8B82FB2B53ADFB00B79837 /* RecordingViewModel.swift */; };
-		5D8B82FF2B53B50500B79837 /* RecordingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8B82FE2B53B50500B79837 /* RecordingController.swift */; };
+		5D8B82FF2B53B50500B79837 /* RecordingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8B82FE2B53B50500B79837 /* RecordingModel.swift */; };
 		5D8B83012B55217A00B79837 /* RecordHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8B83002B55217A00B79837 /* RecordHeader.swift */; };
 /* End PBXBuildFile section */
 
@@ -74,7 +74,7 @@
 		5D8B82F72B53A53F00B79837 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		5D8B82F92B53A89400B79837 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		5D8B82FB2B53ADFB00B79837 /* RecordingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingViewModel.swift; sourceTree = "<group>"; };
-		5D8B82FE2B53B50500B79837 /* RecordingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingController.swift; sourceTree = "<group>"; };
+		5D8B82FE2B53B50500B79837 /* RecordingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingModel.swift; sourceTree = "<group>"; };
 		5D8B83002B55217A00B79837 /* RecordHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordHeader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -129,7 +129,6 @@
 		5D8B82972B52E7AC00B79837 /* RecoGrapher */ = {
 			isa = PBXGroup;
 			children = (
-				5D8B82FD2B53B4EC00B79837 /* Controller */,
 				5D8B82F62B5397A200B79837 /* Info.plist */,
 				5D8B82F32B53925500B79837 /* ViewModel */,
 				5D8B82E12B538C6400B79837 /* Model */,
@@ -203,6 +202,7 @@
 		5D8B82E12B538C6400B79837 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				5D8B82FE2B53B50500B79837 /* RecordingModel.swift */,
 				5D8B82E22B538C7500B79837 /* AuthModel.swift */,
 			);
 			path = Model;
@@ -223,14 +223,6 @@
 				5D8B82FB2B53ADFB00B79837 /* RecordingViewModel.swift */,
 			);
 			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		5D8B82FD2B53B4EC00B79837 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				5D8B82FE2B53B50500B79837 /* RecordingController.swift */,
-			);
-			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -379,7 +371,7 @@
 				5D8B82DC2B52F0E300B79837 /* RecordPage.swift in Sources */,
 				5D8B82ED2B538FC000B79837 /* SignUp.swift in Sources */,
 				5D8B829B2B52E7AC00B79837 /* ContentView.swift in Sources */,
-				5D8B82FF2B53B50500B79837 /* RecordingController.swift in Sources */,
+				5D8B82FF2B53B50500B79837 /* RecordingModel.swift in Sources */,
 				5D8B82C92B52EA1E00B79837 /* Home.swift in Sources */,
 				5D8B82D32B52EB9A00B79837 /* ColorExtension.swift in Sources */,
 				5D8B82DA2B52F0C100B79837 /* RecordButton.swift in Sources */,
