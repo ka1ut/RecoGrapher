@@ -12,43 +12,41 @@ struct RecordPage: View {
     
     var body: some View {
         GeometryReader { geometryProxy in
-
-                VStack {
-                    RecordHeaderView()
-                    
-                    ZStack{
-                        VStack() {
-                            ScrollView(.vertical){
-                                LazyVStack{
-                                    Image("person")
-                                    Image("person")
-                                }
+            VStack {
+                RecordHeaderView()
+                
+                ZStack{
+                    VStack() {
+                        ScrollView(.vertical){
+                            LazyVStack{
+                                Image("person")
+                                Image("person")
                             }
-                            
-                            
-                            Spacer()
-                            
-                            Button(action:{
-                                recordingViewModel.onTaped()
-                            },label:{
-                                Image(systemName: recordingViewModel.isRecognition ? "mic.slash.circle" : "mic.circle")
-                                    .resizable()
-                                    .scaledToFit()
-                                    .frame(width: 100, height: 100)
-                                    .foregroundColor(recordingViewModel.isRecognition ? .red : .primary)
-                            })
                         }
                         
+                        HStack{
+                            ZStack{
+                                Button(action:{
+                                    recordingViewModel.onTaped()
+                                },label:{
+                                    ZStack{
+                                        Rectangle()
+                                            .fill(.red)
+                                            .frame(width: recordingViewModel.isRecognition ? 35 : 70, height: recordingViewModel.isRecognition ? 35 : 70)
+                                            .cornerRadius(recordingViewModel.isRecognition ? 5 : 35)
+                                    }
+                                })
+                                Circle()
+                                    .stroke(Color.gray, lineWidth: 5)
+                                    .frame(width: 85, height: 85)
+                            }
+                        }
                     }
-                }
-                VStack{
-                    
-                    Spacer()
                     
                 }
-                .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/ .all/*@END_MENU_TOKEN@*/)
-                .background(Color.customWhite)
             }
+            .background(Color.customWhite)
+        }
     }
 }
 
