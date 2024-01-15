@@ -8,7 +8,7 @@ struct RecordButton: View {
                 WriteView.toggle()
             }) {
                 Image(systemName: "waveform")
-                    .foregroundColor(.white)
+                    .foregroundColor(Color.customWhite)
                     .font(.system(size: 26))
                     .frame(width: 70, height: 70)
                     .background(Color.customBlack)
