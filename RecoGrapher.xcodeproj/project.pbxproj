@@ -18,7 +18,7 @@
 		5D8B82D32B52EB9A00B79837 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8B82D22B52EB9A00B79837 /* ColorExtension.swift */; };
 		5D8B82D62B52EE2A00B79837 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D8B82D52B52EE2A00B79837 /* Colors.xcassets */; };
 		5D8B82DA2B52F0C100B79837 /* RecordButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8B82D92B52F0C100B79837 /* RecordButton.swift */; };
-		5D8B82DC2B52F0E300B79837 /* Recording.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8B82DB2B52F0E300B79837 /* Recording.swift */; };
+		5D8B82DC2B52F0E300B79837 /* RecordPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8B82DB2B52F0E300B79837 /* RecordPage.swift */; };
 		5D8B82E32B538C7500B79837 /* AuthModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8B82E22B538C7500B79837 /* AuthModel.swift */; };
 		5D8B82E52B538D6C00B79837 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5D8B82E42B538D6C00B79837 /* GoogleService-Info.plist */; };
 		5D8B82E82B538EFA00B79837 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 5D8B82E72B538EFA00B79837 /* FirebaseAuth */; };
@@ -65,7 +65,7 @@
 		5D8B82D22B52EB9A00B79837 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		5D8B82D52B52EE2A00B79837 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		5D8B82D92B52F0C100B79837 /* RecordButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordButton.swift; sourceTree = "<group>"; };
-		5D8B82DB2B52F0E300B79837 /* Recording.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recording.swift; sourceTree = "<group>"; };
+		5D8B82DB2B52F0E300B79837 /* RecordPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordPage.swift; sourceTree = "<group>"; };
 		5D8B82E22B538C7500B79837 /* AuthModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthModel.swift; sourceTree = "<group>"; };
 		5D8B82E42B538D6C00B79837 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5D8B82EC2B538FC000B79837 /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
@@ -193,19 +193,11 @@
 		5D8B82D72B52F09B00B79837 /* Record */ = {
 			isa = PBXGroup;
 			children = (
-				5D8B82DD2B52F3E900B79837 /* Recording */,
+				5D8B82DB2B52F0E300B79837 /* RecordPage.swift */,
 				5D8B82D92B52F0C100B79837 /* RecordButton.swift */,
 				5D8B83002B55217A00B79837 /* RecordHeader.swift */,
 			);
 			path = Record;
-			sourceTree = "<group>";
-		};
-		5D8B82DD2B52F3E900B79837 /* Recording */ = {
-			isa = PBXGroup;
-			children = (
-				5D8B82DB2B52F0E300B79837 /* Recording.swift */,
-			);
-			path = Recording;
 			sourceTree = "<group>";
 		};
 		5D8B82E12B538C6400B79837 /* Model */ = {
@@ -384,7 +376,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5D8B82DC2B52F0E300B79837 /* Recording.swift in Sources */,
+				5D8B82DC2B52F0E300B79837 /* RecordPage.swift in Sources */,
 				5D8B82ED2B538FC000B79837 /* SignUp.swift in Sources */,
 				5D8B829B2B52E7AC00B79837 /* ContentView.swift in Sources */,
 				5D8B82FF2B53B50500B79837 /* RecordingController.swift in Sources */,

@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct RecordingPage: View {
+struct RecordPage: View {
     @State private var showingCamera = false
     @State private var image: UIImage?
     @State var showCapturedImage = false
@@ -53,5 +53,5 @@ struct RecordingPage: View {
 }
 
 #Preview {
-    RecordingPage()
+    RecordPage()
 }
