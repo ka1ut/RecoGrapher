@@ -32,13 +32,13 @@ struct RecordPage: View {
                                     ZStack{
                                         Rectangle()
                                             .fill(.red)
-                                            .frame(width: recordingViewModel.isRecognition ? 35 : 70, height: recordingViewModel.isRecognition ? 35 : 70)
+                                            .frame(width: recordingViewModel.isRecognition ? 35 : 55, height: recordingViewModel.isRecognition ? 35 : 55)
                                             .cornerRadius(recordingViewModel.isRecognition ? 5 : 35)
                                     }
                                 })
                                 Circle()
-                                    .stroke(Color.gray, lineWidth: 5)
-                                    .frame(width: 85, height: 85)
+                                    .stroke(Color.gray, lineWidth: 4)
+                                    .frame(width: 65, height: 65)
                             }
                         }
                     }
